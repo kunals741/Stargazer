@@ -1,0 +1,17 @@
+query Viewer {
+    viewer {
+        bio
+        followers {
+            totalCount
+        }
+        following {
+            totalCount
+        }
+        login
+        name
+        avatarUrl
+        repositories {
+            totalCount
+        }
+    }
+}

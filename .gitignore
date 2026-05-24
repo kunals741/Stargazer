@@ -1,0 +1,59 @@
+# Built application files
+*.apk
+*.aab
+*.ap_
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Java/Kotlin class files
+*.class
+
+# Generated files
+bin/
+gen/
+out/
+build/
+
+# Gradle files
+.gradle/
+local.properties
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+
+# Keystore files
+*.jks
+*.keystore
+
+# Logs
+*.log
+
+# Navigation editor temp files
+.navigation/
+
+# Captures
+captures/
+
+# Native build
+.externalNativeBuild/
+.cxx/
+
+# Google Services
+google-services.json
+
+# Firebase Crashlytics
+com_crashlytics_export_strings.xml
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Kotlin
+.kotlin/
+
+# Secrets / env
+.env

@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("com.apollographql.apollo") version "5.0.0"
 }
 
 android {
@@ -39,6 +40,17 @@ android {
     }
 }
 
+apollo {
+    service("github") {
+        packageName.set("com.kunal.stargazer")
+        introspection {
+            endpointUrl.set("https://api.github.com/graphql")
+            headers.put("Authorization", "Bearer <GITHUB TOKEN HERE: NOT COMMITING BRO>")
+            schemaFile.set(file("src/main/graphql/schema.graphqls"))
+        }
+    }
+}
+
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -56,4 +68,6 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
+    implementation(libs.apollo.runtime)
+
 }
